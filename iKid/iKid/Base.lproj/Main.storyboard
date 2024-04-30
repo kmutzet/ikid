@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QD0-qo-hcJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dad-->
+        <scene sceneID="76b-zp-mm6">
+            <objects>
+                <viewController id="vHF-tX-eRq" customClass="DadController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V1g-Yu-kmh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ni7-We-Ybi">
+                                <rect key="frame" x="159" y="102" width="75" height="35"/>
+                                <color key="tintColor" systemColor="systemTealColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <action selector="toggleJoke" destination="vHF-tX-eRq" eventType="touchUpInside" id="l1q-4t-HFW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7h-BN-mOp" userLabel="joke Label">
+                                <rect key="frame" x="66.023200475897056" y="358.6652290303067" width="258.00000000000045" height="137.99999999993759"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.60126994759999997" green="0.72626522090000001" blue="0.78451192010000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WxV-4g-y1d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ni7-We-Ybi" firstAttribute="top" secondItem="WxV-4g-y1d" secondAttribute="top" constant="7" id="AIA-3a-fV5"/>
+                            <constraint firstItem="WxV-4g-y1d" firstAttribute="trailing" secondItem="Ni7-We-Ybi" secondAttribute="trailing" constant="16" id="xt6-yR-vEh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dad" id="ccF-zS-X3m">
+                        <color key="badgeColor" systemColor="systemGray4Color"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="button" destination="Ni7-We-Ybi" id="gBy-cy-COk"/>
+                        <outlet property="jokeLabel" destination="t7h-BN-mOp" id="EWJ-dt-axZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oy6-ct-QkD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736.64122137404581" y="711.97183098591552"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="w1P-Zi-kfk">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QD0-qo-hcJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6e2-cn-Mvf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="tintColor" red="0.4432017815" green="0.43674661510000001" blue="0.89664926300000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vHF-tX-eRq" kind="relationship" relationship="viewControllers" id="LaP-bf-hCM"/>
+                        <segue destination="DpY-5T-u2a" kind="relationship" relationship="viewControllers" id="VtW-aO-m8Q"/>
+                        <segue destination="b5o-am-ELG" kind="relationship" relationship="viewControllers" id="eT1-lO-dRa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYs-79-n7n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+        <!--Pun-->
+        <scene sceneID="mjN-im-RBt">
+            <objects>
+                <viewController id="DpY-5T-u2a" customClass="PunController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MPz-pe-mxY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11k-6V-JZQ">
+                                <rect key="frame" x="159" y="102" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <action selector="toggleJoke" destination="DpY-5T-u2a" eventType="touchUpInside" id="IDO-pD-UA9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ns-hw-Lci" userLabel="joke Label">
+                                <rect key="frame" x="55" y="386" width="283" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0I9-ig-tQW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="11k-6V-JZQ" firstAttribute="top" secondItem="0I9-ig-tQW" secondAttribute="top" constant="7" id="3Rm-3F-Fj6"/>
+                            <constraint firstItem="0I9-ig-tQW" firstAttribute="trailing" secondItem="11k-6V-JZQ" secondAttribute="trailing" constant="16" id="GeQ-1h-uuV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pun" id="Mul-5i-nM6">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="button" destination="11k-6V-JZQ" id="RsI-Qw-5UJ"/>
+                        <outlet property="jokeLabel" destination="8ns-hw-Lci" id="s3x-NQ-EQ9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4M-z0-AaN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-48.091603053435115" y="711.97183098591552"/>
+        </scene>
+        <!--Good-->
+        <scene sceneID="htj-1l-TTn">
+            <objects>
+                <viewController id="b5o-am-ELG" customClass="GoodController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cCv-KF-ZbE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukd-tQ-DnW">
+                                <rect key="frame" x="159" y="97" width="75" height="35"/>
+                                <color key="tintColor" red="0.55431718109999994" green="0.42360162849999999" blue="0.7236121874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <action selector="toggleJoke" destination="b5o-am-ELG" eventType="touchUpInside" id="4iY-CJ-tYG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEC-bm-D80" userLabel="joke Label">
+                                <rect key="frame" x="51.537477691921595" y="347.6210588934548" width="289.00000000000023" height="157.9999999999643"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.55431718109999994" green="0.42360162849999999" blue="0.7236121874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.55431718109999994" green="0.42360162849999999" blue="0.7236121874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TSc-1p-Um4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ukd-tQ-DnW" firstAttribute="top" secondItem="TSc-1p-Um4" secondAttribute="top" constant="7" id="Gtn-Y7-txR"/>
+                            <constraint firstItem="TSc-1p-Um4" firstAttribute="trailing" secondItem="ukd-tQ-DnW" secondAttribute="trailing" constant="16" id="MOe-PM-02b"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Good" id="1Ro-X0-zKu"/>
+                    <connections>
+                        <outlet property="button" destination="ukd-tQ-DnW" id="lB4-gK-Rc1"/>
+                        <outlet property="jokeLabel" destination="iEC-bm-D80" id="tLC-cX-3cV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyR-f4-DV3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674.04580152671758" y="711.97183098591552"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
